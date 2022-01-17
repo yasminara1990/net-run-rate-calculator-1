@@ -1,23 +1,30 @@
 {
   "name": "net-run-rate-calculator",
   "version": "0.0.1",
+  "type": "module",
   "description": "Calculates the net run rate for a given team using lambda step functions.",
   "scripts": {
     "build": "npm run clean && webpack",
     "watch": "tsc -w",
     "lint": "eslint --ext .ts .",
-    "clean": "rimraf dist"
+    "test": "jest",
+    "clean": "rimraf dist",
+    "start": "nodemon index.ts",
+    "dev": "ts-node index.ts"
   },
   "author": "Vikas Garg",
   "license": "ISC",
   "devDependencies": {
+    "@babel-preset-env": "^1.6.1",
     "@types/node": "^13.7.7",
     "@types/webpack": "^4.41.7",
     "@typescript-eslint/eslint-plugin": "^2.21.0",
     "@typescript-eslint/parser": "^2.21.0",
+    "babel-preset-env": "^1.7.0",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-prettier": "^3.1.2",
+    "jest": "^27.4.7",
     "prettier": "^1.19.1",
     "rimraf": "^3.0.2",
     "ts-loader": "^6.2.1",
@@ -25,5 +32,10 @@
     "typescript": "^3.8.3",
     "webpack": "^4.42.0",
     "webpack-cli": "^3.3.11"
-  }
+  },
+  "jest": {
+    "transform": {
+        "^.+\\.(ts|tsx)$": "ts-jest"
+    }
+}
 }

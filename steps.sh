@@ -6,7 +6,7 @@ cd dist
 
 zip -r ./createMatches.zip ./createMatchesHandler.js
 zip -r ./calculateRunRate.zip ./calculateRunRateHandler.js
-
+us-east-1
 cd ..
 
 awslocal lambda create-function --function-name CreateMatchesFunction --runtime nodejs12.x --handler createMatchesHandler.handler --role arn:aws:iam::012345678901:role/DummyRole --zip-file fileb://dist/createMatches.zip

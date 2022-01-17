@@ -4,12 +4,12 @@
   "States": {
     "CreateMatches": {
       "Type": "Task",
-      "Resource": "arn:aws:lambda:us-east-1:123456789012:function:CreateMatchesFunction",
+      "Resource": "arn:aws:lambda:us-west-2:123456789012:function:CreateMatchesFunction",
       "Next": "CalculateRunRate"
     },
     "CalculateRunRate": {
       "Type": "Task",
-      "Resource": "arn:aws:lambda:us-east-1:123456789012:function:CalculateRunRateFunction",
+      "Resource": "arn:aws:lambda:us-west-2:123456789012:function:CalculateRunRateFunction",
       "End": true
     }
   }

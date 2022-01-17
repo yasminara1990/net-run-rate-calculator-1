@@ -56,13 +56,13 @@ export const handler = async (event: MatchEvent): Promise<MatchResult[]> => {
 const generateScore = (): number => generateRandom(50, 250); // Generates the number between 50 & 250 both inclusive.
 
 
-const generateWickets = (): number => generateRandom(0, 10); // Generates the number between 0 & 10 both inclusive.
+export const generateWickets = (): number => generateRandom(0, 0); // Generates the number between 0 & 10 both inclusive.
 
-const generateRandom = (min: number, max: number, floor = true): number => {
+export const generateRandom = (min: number, max: number, floor = true): number => {
   return floor ? Math.floor(Math.random() * (max - min + 1)) + min : Math.random() * (max - min + 1) + min;
 };
 
-const generateOvers = (matchType: MatchType): number => {
+export const generateOvers = (matchType: MatchType): number => {
   switch (matchType) {
     case MatchType.ODI:
       return generateRandom(30, 50, false); // Generates the number between 30 and 50 both inclusive.
